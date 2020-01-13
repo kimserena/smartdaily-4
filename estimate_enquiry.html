@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스마트데일리</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png">
+</head>
+<body style="overflow-y: scroll;">
+<header>
+  <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="로고"><h1></h1><span></span>
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="service_info.html" class="nav_down">서비스 소개</a></li>
+                    <li><a href="user_info.html" class="nav_down">서비스 이용</a></li>
+                    <li><a href="notice.html" class="nav_down">고객센터</a></li>
+                    <li><a href="estimate_enquiry.html">　</a></li>
+                </ul>
+                <div class="estimate_enquiry"><li><a href="estimate_enquiry.html">견적 문의</a></li></div>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login_button">로그인</button> <div class="line"></div></li>
+                    <li><button onclick="location.href='join.html'">회원 가입</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-navi">
+                <div class="wrap">
+                    <div class="sub-menu">
+                        <ul class="sub sub1">
+                            <li><a href="service_info.html">서비스 정보</a></li>
+                            <li><a href="operation_guide.html">이용 안내</a></li>
+                        </ul>
+                        <ul class="sub sub2">
+                            <li><a href="user_info.html">개인정보 관리</a></li>
+<!--                            <li><a href="support.html">고장 접수</a></li>-->
+                            <li><a href="daily_check.html">일보 조회</a></li>
+                        </ul>
+                        <ul class="sub sub3">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="support.html">문의 하기</a></li>
+                            <li><a href="menual.html">매뉴얼</a></li>
+                        </ul>
+                        <ul class="sub sub4">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section>
+        <div id="wrap">
+            <div class="serviceintro topmg_serviceintro">
+                    <div class="sub-top-background4">
+                        <div class="navbarbackg">
+                       <div class="container">
+                        <div class="navbar"> <a href="#home"><i class="fas fa-home"></i> <!--<span class="font-gray"><i class="xi-angle-right-thin"></i></span>--></a>
+                            <div class="dropdown">
+                                <button class="dropbtn">견적 문의 <i class="arrow down"></i> </button>
+                                <div class="dropdown-content"> <a href="service_info.html">서비스 소개</a> <a href="user_info.html">서비스 이용</a> <a href="notice.html">고객센터</a> <a href="estimate_enquiry.html" class="dropbtn-color">견적 문의</a></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+<!--                <div class="container">-->
+                    <h2 class="text-border">견적 문의</h2> 
+<!--                    <p>홈 <span class="font-gray"><i class="xi-angle-right-thin"></i></span> <span class="font-blue">견적 문의</span></p>-->
+<!--                </div>-->
+            </div>
+               <div id="sub-visual-bg-basic">
+                   <div id="sub-visual">
+                       <div class="container">
+                            <div class="sub-form-info">
+                                <div class="sub-content">
+                                    <div class="form_row">
+                                      <div class="form_col-100">
+                                       <h3>신청자 정보 입력</h3>
+                                        <div class="container">
+                                          <form action="/action_page.php">
+                                            <div class="form_row">
+                                              <div class="form_col-50">
+                                                 <ul>
+                                                 <li>
+                                                  <div class="colgroup1"><label for="name">이름</label></div>
+                                                  <div class="colgroup2"><input type="text" id="name" name="name" data-required="이름" autofocus required></div>
+                                                     </li>
+                                                     <li>
+                                                  <div class="colgroup1"><label for="tel">전화 번호</label></div>
+                                                <div class="colgroup2"><select name="compTel1" id="frmCompTel1" title="전화 번호 첫자리" data-required="전화 번호 첫자리" required="">
+                                                    <option value="">선택</option>
+                                                    <optgroup label="일반전화">
+                                                        <option value="02">02</option>
+                                                        <option value="031">031</option>
+                                                        <option value="032">032</option>
+                                                        <option value="033">033</option>
+                                                        <option value="041">041</option>
+                                                        <option value="042">042</option>
+                                                        <option value="043">043</option>
+                                                        <option value="051">051</option>
+                                                        <option value="052">052</option>
+                                                        <option value="053">053</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="061">061</option>
+                                                        <option value="062">062</option>
+                                                        <option value="063">063</option>
+                                                        <option value="064">064</option>
+                                                        <option value="0502">0502</option>
+                                                        <option value="0505">0505</option>
+                                                        <option value="070">070</option>
+                                                    </optgroup>
+                                                    <optgroup label="휴대전화">
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="013">013</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </optgroup>
+                                                </select>
+											-
+											<input type="tel" name="compTel2" id="frmCompTel2" size="5" maxlength="4" title="전화 번호 중간자리" data-required="전화 번호 중간자리" required="">
+											-
+											<input type="tel" name="compTel3" id="frmCompTel3" size="5" maxlength="4" title="전화 번호 뒷자리" data-required="전화 번호 뒷자리" required="">
+                                                  </div>
+                                                     </li>
+                                                     <li>
+                                                  <div class="colgroup1"><label for="email">이메일</label></div>
+                                                <div class="colgroup2">
+                                                <dd>
+											<input type="email" name="mngMail1" id="frmMngMail1" title="담당자 전자우편 ID" data-required="담당자 전자우편" required="">
+											@
+											<input type="email" name="mngMail2" id="frmMngMail2" title="담당자 전자우편 주소" data-required="담당자 전자우편" required="">
+                                                    </dd></div>
+                                                     </li>
+                                                     <li>
+                                                  <div class="colgroup1"><label for="city">우편번호</label></div>
+                                                  <div class="colgroup2"><input type="text" name="compZip" id="frmCompZip" size="6" maxlength="5" title="우편번호" data-required="기업 우편번호" required="" style="width:20%"> <button href="javascript:void(0)" id="frmCompAddress" onclick="execDaumPostcode()" data-type="button" data-btnstyle="simple" data-btncolor="blue">우편번호 찾기</button></div>
+                                                     </li>
+                                                     <li class="heightlow">
+                                                  <div class="colgroup1"><label for="adr">농장주소</label></div>
+                                                <div class="colgroup2"><input type="text" name="compAddress1" id="frmCompAddress1" title="기업 기본 주소" class="w89" data-required="기업 주소" required="">
+                                                    <input type="text" name="compAddress2" id="frmCompAddress2" title="기업 상세 주소" class="w100" style="margin-top:6px"></div>
+                                                     </li>
+                                                  </ul>
+                                                <div class="form_row">
+                                                  <div class="form_col-50">
+                                                    <label class="checkbox_container">
+                                                      <input type="checkbox" checked="checked" name="sameadr"> 개인정보 수집 및 이용에 동의합니다.
+                                                      <span class="checkmark"></span>
+                                                    </label>
+                                                    <label for="zip" class="font-red"><i class="fas fa-exclamation-circle"></i> 위 항목을 빠짐없이 기재해 주시면 보다 정확한 견적 발주가 가능합니다.</label>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="form_col-50">
+                                                 <ul>
+                                                 <li>
+                                                  <div class="colgroup1"><label for="cname">농장 정보</label></div>
+                                                <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+                                                <div class="colgroup2"><div class="custom-select" style="width:200px;">
+                                                  <select>
+                                                    <option value="0">선택</option>
+                                                    <option value="1">자가</option>
+                                                    <option value="2">위탁</option>
+                                                  </select>
+                                                    </div></div>
+                                                    </li>
+                                                    <li>
+                                                  <div class="colgroup1"><label for="ccnum">농장 규모</label></div>
+                                                  <div class="colgroup2"><input type="text" name="p1" id="frmCompAddress1" title="농장 규모" class="w90" data-required="농장 규모" required=""></div>
+                                                     </li>
+                                                     <li class="heighthighx2">
+                                                  <div class="colgroup1"><label for="expmonth">전달 사항</label></div>
+                                                  <div class="colgroup2"><textarea type="text" placeholder="내용을 입력해주세요"></textarea></div>
+                                                     </li>
+                                                  </ul>
+                                              </div>
+                                            </div>
+                                            <input type="submit" value="견적 신청하기" class="btn">
+                                          </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="cleafix"></div>
+    <footer>
+        <div class="container">
+           <div id="footer-logo"><img src="img/logo-e.png" alt=""></div>
+            <div id="company-info">
+                대표이사 : 최승규 <span></span> 사업자등록번호 : 779-87-00956 <span></span> 법인등록번호 : 165011-0062463 <span></span> 대표 전화 : 041-356-5084 <span></span> 대표 팩스 : 041-356-5086 <span></span> 이메일 : abchoi2018@gmail.com
+            </div>
+            <div id="copyright">Copyright ⓒ 2019 스마트데일리 All Rights Reserved.</div>
+        </div>
+    </footer>
+    <button class="m_tops" id="myBtn" title="Go to Top"><i class="fas fa-chevron-up"></i><p>맨 위로</p></button>
+    
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="로그인 창 닫기">&times;</span>
+          <img src="img/app-gray.png" alt="로고" class="logo">
+          <h1>로그인</h1>
+        </div>
+
+        <div class="modal_container">
+          <label for="uname"><b>아이디</b></label>
+          <input type="text" placeholder="" name="uname" required>
+
+          <label for="psw"><b>패스워드</b></label>
+          <input type="password" placeholder="" name="psw" required>
+
+          <button type="submit">로그인</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> 기억하기
+          </label>
+        </div>
+
+        <div class="modal_container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
+          <span class="psw"><a href="#">패스워드 찾기</a></span>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스마트데일리</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png">
+</head>
+<body style="overflow-y: scroll;">
+<header>
+  <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="로고"><h1></h1><span></span>
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="service_info.html" class="nav_down">서비스 소개</a></li>
+                    <li><a href="user_info.html" class="nav_down">서비스 이용</a></li>
+                    <li><a href="notice.html" class="nav_down">고객센터</a></li>
+                    <li><a href="estimate_enquiry.html">　</a></li>
+                </ul>
+                <div class="estimate_enquiry"><li><a href="estimate_enquiry.html">견적 문의</a></li></div>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login_button">로그인</button> <div class="line"></div></li>
+                    <li><button onclick="location.href='join.html'">회원 가입</button></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-navi">
+                <div class="wrap">
+                    <div class="sub-menu">
+                        <ul class="sub sub1">
+                            <li><a href="service_info.html">서비스 정보</a></li>
+                            <li><a href="operation_guide.html">이용 안내</a></li>
+                        </ul>
+                        <ul class="sub sub2">
+                            <li><a href="user_info.html">개인정보 관리</a></li>
+<!--                            <li><a href="support.html">고장 접수</a></li>-->
+                            <li><a href="daily_check.html">일보 조회</a></li>
+                        </ul>
+                        <ul class="sub sub3">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="support.html">문의 하기</a></li>
+                            <li><a href="menual.html">매뉴얼</a></li>
+                        </ul>
+                        <ul class="sub sub4">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section>
+        <div id="wrap">
+            <div class="serviceintro">
+                <div class="sub-top-background1-2">
+                    <div class="navbarbackg">
+                       <div class="container">
+                        <div class="navbar"> <a href="#home"><i class="fas fa-home"></i> <!--<span class="font-gray"><i class="xi-angle-right-thin"></i></span>--></a>
+                            <div class="dropdown">
+                                <button class="dropbtn">서비스 소개 <i class="arrow down"></i> </button>
+                                <div class="dropdown-content"> <a href="service_info.html" class="dropbtn-color">서비스 소개</a> <a href="user_info.html">서비스 이용</a> <a href="notice.html">고객센터</a> <a href="estimate_enquiry.html">견적 문의</a></div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="dropbtn">이용 안내<i class="arrow down"></i> </button>
+                                <div class="dropdown-content"> <a href="service_info.html">서비스 정보</a> <a href="operation_guide.html" class="dropbtn-color">이용 안내</a></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 class="text-border">이용 안내</h2>
+            </div>
+            
+            <div class="container">
+                <div class="tab">
+                    <button class="tablinks" onclick="openInfo(event, '01')" id="defaultOpen">도입필요성</button>
+                    <button class="tablinks" onclick="openInfo(event, '02')">도입효과</button>
+                    <button class="tablinks" onclick="openInfo(event, '03')">모바일 서비스</button>
+                </div>
+            </div>
+            <div id="01" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                   <div id="sub-visual">
+                       <div class="container">
+                            <div class="sub-img-info">
+                               <div class="sub-title">
+<!--                                    <h3>축산농가</h3>-->
+                                </div>
+                                <div class="sub-content">
+                                    <p class="caption">도입 필요성</p>
+                                   <p><img src="img/img_animal_need.png" alt="도입필요성"></p>
+                                   <p class="caption">향후 계획</p>
+                                    <p><img src="img/img_animal_plan.png" alt="향후계획"></p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div id="02" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                   <div id="sub-visual">
+                       <div class="container">
+                            <div class="sub-img-info">
+                               <div class="sub-title">
+<!--                                    <h3>회사</h3>-->
+                                </div>
+                                <div class="sub-content">
+                                   <p class="caption">도입 효과</p>
+                                    <p><img src="img/img_animal_effect.png" alt="도입효과"></p>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div id="03" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                   <div id="sub-visual">
+                       <div class="container">
+                          <div class="sub-img-info">
+                           <div class="sub-title">
+<!--                                    <h3>모바일 서비스</h3>-->
+                                </div>
+                            </div>
+                            <article>
+                                <div class="og_content mobile">
+<!--
+                                    <div class="og_left">
+                                        <h2 id="_smart" class="text-border-gray">SMART</h2>
+                                        <h2 id="_daily" class="text-border-gray">DAILY</h2>
+                                        <h2 id="_check" class="text-border-gray">CHECK</h2>
+                                        <h2 id="_icon" class="text-border-gray"><i class="fas fa-check"></i></h2>
+                                    </div>
+-->
+                                </div>
+                                <div id="_nowtext" class="_nowtext">
+                                    <span>스마트데일리는 똑똑하게 하루의 정보를 확인 할 수 있는 농장의 작업 환경을 만듭니다.</span>                                    
+                                    <p>지금 바로 스마트데일리를 만나보세요!</p>
+                                    <a href="https://www.apple.com/kr/ios/app-store/" target="_blank" rel="noreferrer" aria-label="app-store"><i class="fab fa-apple"></i> App Store
+                                        <figure></figure>
+                                    </a>
+                                    <a target="_blank" rel="noreferrer" aria-label="google-play" href="https://play.google.com/store"><i class="fab fa-google-play"></i> Google Play
+                                        <figure></figure>
+                                    </a>
+                                </div>
+                            </article>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cleafix"></div>
+    <footer>
+        <div class="container">
+           <div id="footer-logo"><img src="img/logo-e.png" alt=""></div>
+            <div id="company-info">
+                대표이사 : 최승규 <span></span> 사업자등록번호 : 779-87-00956 <span></span> 법인등록번호 : 165011-0062463 <span></span> 대표 전화 : 041-356-5084 <span></span> 대표 팩스 : 041-356-5086 <span></span> 이메일 : abchoi2018@gmail.com
+            </div>
+            <div id="copyright">Copyright ⓒ 2019 스마트데일리 All Rights Reserved.</div>
+        </div>
+    </footer>
+    <button class="m_tops" id="myBtn" title="Go to Top"><i class="fas fa-chevron-up"></i><p>맨 위로</p></button>
+    
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="로그인 창 닫기">&times;</span>
+          <img src="img/app-gray.png" alt="로고" class="logo">
+          <h1>로그인</h1>
+        </div>
+
+        <div class="modal_container">
+          <label for="uname"><b>아이디</b></label>
+          <input type="text" placeholder="" name="uname" required>
+
+          <label for="psw"><b>패스워드</b></label>
+          <input type="password" placeholder="" name="psw" required>
+
+          <button type="submit">로그인</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> 기억하기
+          </label>
+        </div>
+
+        <div class="modal_container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button>
+          <span class="psw"><a href="#">패스워드 찾기</a></span>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+        $(document).ready(function () {
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        });
+    </script>
+</body>
+
+</html>

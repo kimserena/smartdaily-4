@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스마트데일리</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png"> </head>
+
+<body style="overflow-y: scroll;">
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo.png" alt="로고">
+                    <h1></h1><span></span> </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="service_info.html" class="nav_down">서비스 소개</a></li>
+                    <li><a href="user_info.html" class="nav_down">서비스 이용</a></li>
+                    <li><a href="notice.html" class="nav_down">고객센터</a></li>
+                    <li><a href="estimate_enquiry.html">　</a></li>
+                </ul>
+                <div class="estimate_enquiry"><li><a href="estimate_enquiry.html">견적 문의</a></li></div>
+            </div>
+            <div class="login">
+                <ul>
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login_button">로그인</button>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <button onclick="location.href='join.html'">회원 가입</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-navi">
+                <div class="wrap">
+                    <div class="sub-menu">
+                        <ul class="sub sub1">
+                            <li><a href="service_info.html">서비스 정보</a></li>
+                            <li><a href="operation_guide.html">이용 안내</a></li>
+                        </ul>
+                        <ul class="sub sub2">
+                            <li><a href="user_info.html">개인정보 관리</a></li>
+<!--                            <li><a href="support.html">고장 접수</a></li>-->
+                            <li><a href="daily_check.html">일보 조회</a></li>
+                        </ul>
+                        <ul class="sub sub3">
+                            <li><a href="notice.html">공지사항</a></li>
+                            <li><a href="support.html">문의 하기</a></li>
+                            <li><a href="menual.html">매뉴얼</a></li>
+                        </ul>
+                        <ul class="sub sub4">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <section>
+        <div id="wrap">
+            <div class="serviceintro">
+                <div class="sub-top-background1"> 
+                <div class="navbarbackg">
+                <div class="container">
+                    <div class="navbar"> <a href="#home"><i class="fas fa-home"></i> <!--<span class="font-gray"><i class="xi-angle-right-thin"></i></span>--></a>
+                        <div class="dropdown">
+                            <button class="dropbtn">서비스 소개 <i class="arrow down"></i> </button>
+                            <div class="dropdown-content"> <a href="service_info.html" class="dropbtn-color">서비스 소개</a> <a href="user_info.html">서비스 이용</a> <a href="notice.html">고객센터</a> <a href="estimate_enquiry.html">견적 문의</a></div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">서비스 정보<i class="arrow down"></i> </button>
+                            <div class="dropdown-content"> <a href="service_info.html" class="dropbtn-color">서비스 정보</a> <a href="operation_guide.html">이용 안내</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </div>
+                <h2 class="text-border">서비스 정보</h2> </div>
+            
+            <div class="container">
+                <div class="tab">
+                    <button class="tablinks" onclick="openInfo(event, '01')" id="defaultOpen">스마트데일리란?</button>
+                    <button class="tablinks" onclick="openInfo(event, '02')">구성 및 기능</button>
+                    <button class="tablinks" onclick="openInfo(event, '03')">농장일보 자동 집계 장치</button>
+                </div>
+            </div>
+            <div id="01" class="tabcontent">
+                <div id="sub-visual-bg">
+                    <div id="sub-visual">
+                        <div class="container">
+                            <div class="sub-visual-info">
+                                <div class="sub-title">
+                                    <h3>AI축산 스마트 데일리</h3> </div>
+                                <div class="sub-content">
+                                    <p>축산농가에 최적 사양관리를 위한 『지능형 축사관리 솔루션』 보급 확산, 축산농가 생산비 절감 및 최적의 사양관리 등으로 경쟁력 강화를 위한 ICT 융복합 장비지원사업입니다.</p>
+                                </div>
+                                <!--                                <div class="info-button"><a href="javascript:void(0)">자세히 보기</a></div>--></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="idxProgram">
+                    <div>
+                        <h2>인공지능 축산 스마트데일리</h2>
+                        <p> 인공지능 축산 스마트데일리는 축산농가의 경영, 생산, 출하관리 솔루션으로서, 수기로 기록하던 방식을 AI기능을 이용하여 실시간으로 체크 확인 하실 수 있는 모니터링 시스템 입니다. </p>
+                        <div>
+                            <dl> <dt><b>국내 자체기술</b><span>확보</span></dt>
+                                <dd>축산농가에 최적 사양관리를 위한
+                                    <br>『지능형 축사관리 솔루션』 보급 확산</dd>
+                            </dl>
+                            <dl> <dt><b>4차 산업혁명</b><span>기술 적용</span></dt>
+                                <dd>농장의 재고 자산 관리 정확성과 효율성을 극대화
+                                    <br>축산업계의 새로운 패러다임을 제시 </dd>
+                            </dl>
+                            <dl> <dt><b>스마트데일리</b><span>실현</span></dt>
+                                <dd>축산농가 생산비 절감 및 최적의 사양관리 등으로
+                                    <br>경쟁력 강화를 위한 ICT 융복합 장비지원사업</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="02" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                    <div id="sub-visual">
+                        <div class="container">
+                            <div class="sub-img-info">
+                                <div class="sub-title">
+                                    <!--                                    <h3>구성 및 기능</h3>--></div>
+                                <div class="sub-content">
+                                    <p class="caption">서비스 구성도</p>
+                                    <p><img src="img/img_animal_parts.png" alt="서비스구성도"></p>
+                                    <p class="caption">서비스 실현</p>
+                                    <p><img src="img/img_animal_parts2.png" alt="서비스실현"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="03" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                    <div id="sub-visual">
+                        <div class="container">
+                            <div class="sub-img-info">
+                                <div class="sub-title">
+                                    <!--                                    <h3>농장일보 자동 집계 장치</h3>--></div>
+                                <div class="sub-content">
+                                    <p class="caption">시스템 개요</p>
+                                    <p><img src="img/img_animal_summary.png" alt="시스템개요"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cleafix"></div>
+    <footer>
+        <div class="container">
+            <div id="footer-logo"><img src="img/logo-e.png" alt=""></div>
+            <div id="company-info"> 대표이사 : 최승규 <span></span> 사업자등록번호 : 779-87-00956 <span></span> 법인등록번호 : 165011-0062463 <span></span> 대표 전화 : 041-356-5084 <span></span> 대표 팩스 : 041-356-5086 <span></span> 이메일 : abchoi2018@gmail.com </div>
+            <div id="copyright">Copyright ⓒ 2019 스마트데일리 All Rights Reserved.</div>
+        </div>
+    </footer>
+    <button class="m_tops" id="myBtn" title="Go to Top"><i class="fas fa-chevron-up"></i>
+        <p>맨 위로</p>
+    </button>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="로그인 창 닫기">&times;</span> <img src="img/app-gray.png" alt="로고" class="logo">
+                <h1>로그인</h1> </div>
+            <div class="modal_container">
+                <label for="uname"><b>아이디</b></label>
+                <input type="text" placeholder="" name="uname" required>
+                <label for="psw"><b>패스워드</b></label>
+                <input type="password" placeholder="" name="psw" required>
+                <button type="submit">로그인</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> 기억하기 </label>
+            </div>
+            <div class="modal_container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button> <span class="psw"><a href="#">패스워드 찾기</a></span> </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>스마트데일리</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/yearpicker.css">
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="js/yearpicker.js" async></script>
+</head>
+
+<body style="overflow-y: scroll;">
+    <!--onLoad="initForm(document.form)">-->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"> <img src="img/logo.png" alt="로고">
+                    <h1></h1><span></span> </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="service_info.html" class="nav_down">서비스 소개</a></li>
+                    <li><a href="user_info.html" class="nav_down">서비스 이용</a></li>
+                    <li><a href="notice.html" class="nav_down">고객센터</a></li>
+                    <li>
+                        <a href="estimate_enquiry.html">　</a>
+                    </li>
+                </ul>
+                <div class="estimate_enquiry">
+                    <li><a href="estimate_enquiry.html">견적 문의</a></li>
+                </div>
+            </div>
+            <div class="login">
+                <ul>
+                    <li>
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="login_button">로그인</button>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <button onclick="location.href='join.html'">회원 가입</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-navi">
+            <div class="wrap">
+                <div class="sub-menu">
+                    <ul class="sub sub1">
+                        <li><a href="service_info.html">서비스 정보</a></li>
+                        <li><a href="operation_guide.html">이용 안내</a></li>
+                    </ul>
+                    <ul class="sub sub2">
+                        <li><a href="user_info.html">개인정보 관리</a></li>
+                        <!--                        <li><a href="support.html">고장 접수</a></li>-->
+                        <li><a href="daily_check.html">일보 조회</a></li>
+                    </ul>
+                    <ul class="sub sub3">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="support.html">문의 하기</a></li>
+                        <li><a href="menual.html">매뉴얼</a></li>
+                    </ul>
+                    <ul class="sub sub4"> </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div id="wrap">
+            <div class="serviceintro">
+                <div class="sub-top-background2-3">
+                    <div class="navbarbackg">
+                        <div class="container">
+                            <div class="navbar"> <a href="#home"><i class="fas fa-home"></i> <!--<span class="font-gray"><i class="xi-angle-right-thin"></i></span>--></a>
+                                <div class="dropdown">
+                                    <button class="dropbtn">서비스 이용 <i class="arrow down"></i> </button>
+                                    <div class="dropdown-content"> <a href="service_info.html">서비스 소개</a> <a href="user_info.html" class="dropbtn-color">서비스 이용</a> <a href="notice.html">고객센터</a> <a href="estimate_enquiry.html">견적 문의</a></div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="dropbtn">일보 조회<i class="arrow down"></i> </button>
+                                    <div class="dropdown-content"> <a href="user_info.html">개인정보 관리</a> <a href="daily_check.html" class="dropbtn-color">일보 조회</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-border">일보 조회</h2> </div>
+            <div class="container">
+                <div class="tab">
+                    <button class="tablinks" onclick="openInfo(event, '01')" id="defaultOpen">일보 조회</button>
+                    <button class="tablinks" onclick="openInfo(event, '02')">조회 권한 신청</button>
+                </div>
+            </div>
+            <div id="01" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                    <div id="sub-visual">
+                        <div class="container">
+                            <!--
+                                <div class="sub-title">
+                                    <h3>일보 조회</h3>
+                                </div>
+                            -->
+                            <div class="sub-content daily_check">
+                                <div class="sub-content daily_check">
+                                    <ul class="tabs">
+                                        <li class="tab-link current" data-tab="tab-1">전체통합월보(누적)</li>
+                                        <li class="tab-link" data-tab="tab-2">전체통합월보(월별)</li>
+                                        <li class="tab-link" data-tab="tab-3">전체 통합일보</li>
+                                        <li class="tab-link" data-tab="tab-4">농장별 월보</li>
+                                        <li class="tab-link" data-tab="tab-5">농장별 일보</li>
+                                        <li class="tab-link" data-tab="tab-6">농장 돈사별 일보</li>
+                                    </ul>
+                                    <div id="tab-1" class="tab-content current">
+                                        <form name="frmEX" autocomplete="off" id="AccrueMonthlyReport">
+                                            <input type="text" name="sdate" id="sdate" size="7" maxlength="7" value="" placeholder="시작 월" title="시작 월 입력" /> 부터
+                                            <input type="text" name="edate" id="edate" size="7" maxlength="7" value="" placeholder="종료 월" title="종료 월 입력" /> 까지
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table1','AccrueMonthlyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table1">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>소재지별</td>
+                                                    <td>돈사</td>
+                                                    <td>면적</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList"> </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab-2" class="tab-content">
+                                        <form name="frmEX" autocomplete="off" id="AllMonthlyReport">
+                                            <input type="text" name="mdate2" class="mdate" size="7" maxlength="7" value="" placeholder="월 선택" title="조회할 월 입력" />
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table2','AllMonthlyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table2">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>소재지별</td>
+                                                    <td>돈사</td>
+                                                    <td>면적</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList2"> </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab-3" class="tab-content">
+                                        <form name="frmEX" autocomplete="off" id="TotalDailyReport">
+                                            <input type="text" name="mdate3" class="mdate" size="7" maxlength="7" value="" placeholder="월 선택" />
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table3','TotalDailyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table3">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>날짜</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList3"> </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab-4" class="tab-content">
+                                        <form name="frmEX" autocomplete="off" id="FarmMonthlyReport">
+                                            <input type="text" name="mdate4" class="ydate" size="7" maxlength="7" value="" placeholder="년 선택" />
+                                            <select id="sel">
+                                                <option value="농장 선택">농장 선택</option>
+                                                <option value="파주 농장">파주 농장</option>
+                                                <option value="의정부 농장">의정부 농장</option>
+                                            </select>
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table4','FarmMonthlyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table4">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>돈사</td>
+                                                    <td>월별</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList4"> </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab-5" class="tab-content">
+                                        <form name="frmEX" autocomplete="off" id="FarmDailyReport">
+                                            <input type="text" name="mdate5" class="mdate" size="7" maxlength="7" value="" placeholder="월 선택" />
+                                            <select>
+                                                <option value="0">농장 선택</option>
+                                                <option value="1">파주 농장</option>
+                                                <option value="2">의정부 농장</option>
+                                            </select>
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table5','FarmDailyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table5">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>날짜</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList5"> </tbody>
+                                        </table>
+                                    </div>
+                                    <div id="tab-6" class="tab-content">
+                                        <form name="frmEX" autocomplete="off" id="FarmDonsaDailyReport">
+                                            <input type="text" name="mdate6" class="mdate" size="7" maxlength="7" value="" placeholder="월 선택" />
+                                            <select onchange="categoryChange(this)">
+                                                <option value="a">농장 선택</option>
+                                                <option value="b">파주 농장</option>
+                                                <option value="c">의정부 농장</option>
+                                            </select>
+                                            <select id="good">
+                                                <option>돈사 선택</option>
+                                            </select>
+                                            <input type="submit" value="조회" class="check_btn"> </form>
+                                        <button type="button" class="e-download" onclick="fnExcelReport('table6','FarmDonsaDailyReport');">엑셀 다운로드</button>
+                                        <table border="1" id="table6">
+                                            <thead>
+                                                <tr style="background: #ddd;">
+                                                    <td>구분</td>
+                                                    <td>날짜</td>
+                                                    <td>시작</td>
+                                                    <td>전입</td>
+                                                    <td>전출</td>
+                                                    <td>폐사</td>
+                                                    <td>출하</td>
+                                                    <td>예상</td>
+                                                    <td>AI 실제</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tableList6"> </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="02" class="tabcontent">
+                <div id="sub-visual-bg-basic">
+                    <div id="sub-visual">
+                        <div class="container">
+                            <!--
+                                <div class="sub-title">
+                                    <h3>일보 조회 권한 신청</h3> </div>
+-->
+                            <div class="sub-content">
+                                <div class="form_row">
+                                    <div class="form_col-100">
+                                        <div class="container">
+                                            <form action="/action_page.php">
+                                                <div class="form_row">
+                                                    <div class="form_col-50">
+                                                        <h3>농장주</h3>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="colgroup1">
+                                                                    <label for="ceoname">대표자명</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <input type="text" id="ceoname" name="ceoname" data-required="대표자명" autofocus required> </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="colgroup1">
+                                                                    <label for="companyname">협력업체명</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <input type="text" id="companyname" name="companyname" data-required="협력업체명" autofocus required> </div>
+                                                            </li>
+                                                            <li class="heighthigh">
+                                                                <div class="colgroup1">
+                                                                    <label for="expmonth">추가 내용</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <textarea type="text" placeholder="내용을 입력해주세요"></textarea>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="form_col-50">
+                                                        <h3>협력업체</h3>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="colgroup1">
+                                                                    <label for="cname">업체명</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <input type="text" id="cname" name="cname" data-required="이름" autofocus required> </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="colgroup1">
+                                                                    <label for="farmname">농장명</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <input type="text" id="farmname" name="farmname" data-required="이름" autofocus required> </div>
+                                                            </li>
+                                                            <li class="heighthigh">
+                                                                <div class="colgroup1">
+                                                                    <label for="expmonth">추가 내용</label>
+                                                                </div>
+                                                                <div class="colgroup2">
+                                                                    <textarea type="text" placeholder="내용을 입력해주세요"></textarea>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">취소</button>
+                                                <input type="submit" value="권한해제 신청" class="btn">
+                                                <input type="submit" value="권한신청" class="btn"> </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="cleafix"></div>
+    <footer>
+        <div class="container">
+            <div id="footer-logo"><img src="img/logo-e.png" alt=""></div>
+            <div id="company-info"> 대표이사 : 최승규 <span></span> 사업자등록번호 : 779-87-00956 <span></span> 법인등록번호 : 165011-0062463 <span></span> 대표 전화 : 041-356-5084 <span></span> 대표 팩스 : 041-356-5086 <span></span> 이메일 : abchoi2018@gmail.com </div>
+            <div id="copyright">Copyright ⓒ 2019 스마트데일리 All Rights Reserved.</div>
+        </div>
+    </footer>
+    <button class="m_tops" id="myBtn" title="Go to Top"><i class="fas fa-chevron-up"></i>
+        <p>맨 위로</p>
+    </button>
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer"> <span onclick="document.getElementById('id01').style.display='none'" class="close" title="로그인 창 닫기">&times;</span> <img src="img/app-gray.png" alt="로고" class="logo">
+                <h1>로그인</h1> </div>
+            <div class="modal_container">
+                <label for="uname"><b>아이디</b></label>
+                <input type="text" placeholder="" name="uname" required>
+                <label for="psw"><b>패스워드</b></label>
+                <input type="password" placeholder="" name="psw" required>
+                <button type="submit">로그인</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> 기억하기 </label>
+            </div>
+            <div class="modal_container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button> <span class="psw"><a href="#">패스워드 찾기</a></span> </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        });
+        //        $(document).ready(function () {
+        //            $(".yearpicker").yearpicker({
+        //                year: 2020
+        //                , startYear: 2012
+        //                , endYear: 2030
+        //            });
+        //        });
+    </script>
+</body>
+
+</html>

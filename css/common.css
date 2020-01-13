@@ -1,0 +1,468 @@
+*{margin:0;padding:0; color:#373737; font-family: 'Noto Sans KR', sans-serif; list-style: none;}
+.clearfix{overflow: auto;}
+.clearfix::after {content: ""; clear: both; display: table;}
+a{text-decoration: none;}
+
+html{}
+body{min-width:1400px; scroll-behavior: smooth;}
+.container{width: 1400px; margin: 0 auto; position: relative;}
+
+/*메인*/
+
+/*header*/
+.logo{display: inline-block; transition: 0.4s; width: 21%; height: 110px; vertical-align: top; text-align: left;}
+.logo img{display: inline-block; height: 75px; padding-top: 18px;}
+
+/*헤더 고정*/
+header{position: fixed; top:0; background: #fff; height: 110px; width:100%; z-index: 5; border-bottom: 1px solid #ddd;}
+header .header-inner{width: 1400px; margin: 0 auto;}
+
+/*
+header.sticky .logo img{height: 50px;}
+header.sticky .nav ul li a{font-size:20px; line-height: 80px; padding:;}
+header.sticky .estimate_enquiry li a{font-size: 20px; line-height: 80px;}
+header.sticky .sub-navi {}
+header.sticky .sub-menu{margin-left: ; font-size:;}
+header.sticky .login{margin-top:-15px;}
+*/
+
+
+/*nav*/
+.nav{overflow: hidden; display: inline-block; width: 67.9%;text-align: center; position: relative;}
+.nav ul li{display: inline-block; width: 20%;}
+.nav ul li a{font-weight: bold; height: 110px; line-height: 110px; display: block; font-size: 21px;}
+.nav ul li a:hover{color:#0050a5; height: 107px;}
+.nav ul li:last-child{}
+
+.estimate_enquiry li{position: absolute; top:0; right: 9.5%; width: 20%;}
+.estimate_enquiry li a{font-weight: bold; height: 110px; width: 100%; line-height: 110px; display: block; font-size: 21px; z-index: 2;}
+.estimate_enquiry li a:hover{color:#0050a5;}
+
+/*sub*/
+.sub-navi {position: absolute; top:110px; min-width: 1400px; width: 100%; background: rgba(255,255,255,1); z-index: 1; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.sub-navi .wrap{width: 1200px; margin: 0 auto;}
+.sub-menu {padding-left: 23.8%;}
+.sub-menu ul {float: left; width: 21.2%;}
+.sub-menu ul li {width: 100%;}
+/*.sub-menu .sub4{background: url(../img/backgroundgray.png) no-repeat right; background-size: auto 100%; height: 110px; margin: 23px 0;}*/
+.sub-menu ul li a{font-weight: bold; font-size: 18px; width: 100%; display: inline-block; padding: 12px 0px; text-align: center;}
+.sub-menu ul li a:hover{color:#0c2340; /*background-color: #F3F6FC;*/ color: #0050a5;}
+
+/*로그인*/
+.login{display: inline-block; text-align: right; width: 10%; height: 110px; vertical-align: top; line-height: 110px;}
+.login li .line{border-right: 1px solid #ddd; margin-left: px; height: 10px; display: inline-block;}
+.login button{border: none; background: #fff; color:#444; font-size: 15px; padding: 0px 0px; cursor: pointer;}
+/*.login h2{color:; display: inline-block; margin-right: 10%; cursor: default;}*/
+.login ul{display: inline-block;}
+.login ul li{display: inline-block;}
+.login ul li button{display: inline-block; padding: 5px; font-size:px; font-weight: bold; color:#555;}
+/*.xi-profile,.xi-user-plus{font-size: 20px; margin-right: 3px; vertical-align: bottom;}*/
+
+
+/*로그인 모달*/
+/* Full-width input fields */
+.modal label{display: inline-block; width: 80px;}
+.modal input[type=text], .modal input[type=password]{width: 314px; padding: 12px 20px; margin: 8px 0; display: inline-block;
+  border: 1px solid #ccc; box-sizing: border-box;}
+.modal button[type=submit]{background-color: #334478; color: white; padding: 8px 20px; margin: 8px 0;
+  border: none; cursor: pointer; width: 100%; font-size:20px;}
+/* Set a style for all buttons */
+.modal_button{background-color: #fff; color: #444; padding: 8px 20px; margin: 8px 0;
+  border: none; cursor: pointer; width: 100%;}
+.moodal_button:hover {background: #fff;}
+/* Extra styles for the cancel button */
+.cancelbtn {width: auto; padding: 10px 18px; background-color: #ddd; color:#; border: none; cursor: pointer;}
+/* Center the image and position the close button */
+.imgcontainer {text-align: center; margin: 24px 0 12px 0; position: relative;}
+img.logo{width:110px; border-radius: 50%; /*-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  /*filter: grayscale(100%);*/}
+.modal_container {padding: 16px;}
+span.psw {float: right; margin-top: 8px;}
+span.psw a{padding: 8px 15px; font-weight: bold; border:1px solid #aaa;}
+/* The Modal (background) */
+.modal {display: none; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 6; /* Sit on top */ left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */ padding-top: 60px;}
+/* Modal Content/Box */
+.modal-content {background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 430px; /* Could be more or less, depending on screen size */}
+/* The Close Button (x) */
+.close {position: absolute; right: 25px; top: 0; color: #000; font-size: 35px; font-weight: bold;}
+.close:hover, .close:focus {color: red; cursor: pointer;}
+/* Add Zoom Animation */
+.animate {-webkit-animation: animatezoom 0.6s; animation: animatezoom 0.6s}
+@-webkit-keyframes animatezoom {from {-webkit-transform: scale(0)} to {-webkit-transform: scale(1)}}
+@keyframes animatezoom {from {transform: scale(0)} to {transform: scale(1)}}
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {span.psw {display: block; float: none;}
+  .cancelbtn {width: 100%;}}
+
+/*회원가입*/
+/* Full-width input fields */
+.modal-join-content label[for=email], .modal-join-content label[for=psw], .modal-join-content label[for=psw-repeat]{display: inline-block; width: 14%;}
+.modal-join-content label[for=checkbox]{display: block;}
+.modal-join-content input[type=text], .modal-join-content input[type=password] {width: 70%; padding: 15px; margin: 5px 0 22px 0; display: inline-block;
+    border: none; border:1px solid #ddd; }
+/* Add a background color when the inputs get focus */
+.modal-join-content input[type=text]:focus, .modal-join-content input[type=password]:focus {background-color: #ddd; outline: none;}
+/* Set a style for all buttons */
+.modal-join-content button {background-color: #334478; color: white; padding: 14px 20px; margin: 8px 0; border: none; cursor: pointer; width: 50%; opacity: 0.9;}
+.modal-join-content button:hover {opacity:1;}
+/* Extra styles for the cancel button */
+.modal-join-content .cancelbtn {padding: 14px 20px; background-color: #ddd; color:#444;}
+/* Float cancel and signup buttons and add an equal width */
+.modal-join-content .cancelbtn, .modal-join-content .signupbtn {float: left; width: 20%; font-size:20px;}
+/* Add padding to container elements */
+.modal-join-content .container {}
+/* The Modal (background) */
+.join-modal {}
+/* Modal Content/Box */
+.modal-join-content {margin: 40px auto;}
+/* Style the horizontal ruler */
+.modal-join-content hr {border: 1px solid #f1f1f1; margin-bottom: 25px; margin-top: 25px;}
+/* The Close Button (x) */
+
+/*section*/
+section{background: ; margin-top: 0px;}
+#wrap{background: url;}
+
+/*비쥬얼*/
+div#slideObject {width:100%; min-width:1100px; min-height:100vh; display:flex; flex-direction:column; position:relative; color:#fff; background: url(../img/img_v_4.jpg);background-size: 100% 100%; background-position: center center; cursor: default;}
+div#slideObject > div { width:1100px; left:50% !important; margin-top:350px; margin-left:-650px; }
+/*
+div#slideObject > div > h2 { font-size:6em; }
+div#slideObject > div > h2 > span:first-of-type { color:#f99; border-top:3px solid #f99; }
+div#slideObject > div > h2 > span:last-of-type { color:#cbff8e; border-top:3px solid #cbff8e; }
+*/
+
+/*.main-visual-info{position: absolute; top:200px;}*/
+.main-visual-info h2:first-child{color:#fff; font-size:30px;}
+.main-visual-info h2:nth-child(2){color: #fff; font-size:72px;}
+.main-visual-info h3{color:#fff; font-weight: inherit;}
+.info-content{margin-top: 30px; margin-bottom: 50px;}
+.info-button a{display: inline-block; font-size:20px; background: rgba(255,255,255,1); color:#2F4173; padding: 10px 60px; border:1px solid #334478; border-radius: 30px;}
+.info-button a:hover{background: #1F6BBB; border:1px solid #334478; color:#fff; transition: 0.8s ease;}
+
+/*자세히 알아보기 견적문의*/
+#main-article{width: 100%; height: 300px; display: table; cursor: default;}
+.main-article-left{display: table-cell; text-align: center; width: 50%; background: url(../img/img_v_animal.jpg) no-repeat center; background-size: ;}
+.main-article-right{display: table-cell; text-align: center; width: 50%; background: url(../img/img_v_inquire.jpg) no-repeat right; background-size: ;}
+.main-article-text{padding-top: 85px;}
+.main-article-text p{color:#fff; padding-bottom: 5px;}
+.main-article-text p:last-child{margin-bottom: 10px;}
+
+.text-border{text-shadow: 0 0 2px #444;}
+
+/*버튼*/
+.button {border: 1px solid #fff; font-size: 20px; padding: 15px 30px; width: 250px; transition: all 0.5s;
+  cursor: pointer; margin: 5px; background: none;}
+.button span{cursor: pointer; display: inline-block; position: relative; transition: 0.5s;}
+.button span a{color: #fff;}
+.button span:after {content: '\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s;}
+.button:hover{background:#1F6BBB; border:1px solid #334478;}
+.button:hover span:after{color:#fff; font-size: ;}
+.button:hover span a{color:#fff;}
+.button:hover span {padding-right: 25px;}
+.button:hover span:after {opacity: 1; right: 0;}
+
+/*footer*/
+footer{border-top:1px solid #eee; /*background: #212529;*/ height: 50px; /*box-shadow: -15px 10px 20px 5px #222 inset;*/ cursor: default; height: 80px;}
+#footer-logo img{float: left; -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%); width: 15%; margin-top: 15px; margin-right: 30px;}
+#company-info{font-size:15px; padding-top: 15px;}
+#company-info span:after{content:""; border-right:1px solid #ccc; height: 10px; display: inline-block; margin-left: 5px; margin-right: 5px;}
+#copyright{font-size: 14px;}
+
+/*탑버튼*/
+#myBtn {display: none; position: fixed; bottom: 0px; right: 50px; z-index: 5; font-size: 18px; border: none; background-color: #444; cursor: pointer; padding:  5px 10px; transition: all 0.3s ease-in-out; box-shadow: 0px 1px 3px 0px #ddd; opacity: 0.8;}
+#myBtn i{font-size: 40px; padding: 0 10px; color:white;}
+#myBtn p{color:white; font-size: 16px;}
+#myBtn:hover {background-color: /*DodgerBlue RoyalBlue*/;}
+
+/*-----------*/
+
+/*서브*/
+
+/*아이콘*/
+.dropdown i {  border: solid #fff;  border-width: 0 3px 3px 0;  display: inline-block;  padding: 3px;}
+.right {  transform: rotate(-45deg);  -webkit-transform: rotate(-45deg);}
+.left {  transform: rotate(135deg);  -webkit-transform: rotate(135deg);}
+.up {  transform: rotate(-135deg);  -webkit-transform: rotate(-135deg);}
+.down {  transform: rotate(45deg);  -webkit-transform: rotate(45deg); vertical-align: middle;}
+
+.navbarbackg{background: rgba(0,0,0,0.2);}
+.navbar {overflow: hidden; border-top: 1px solid rgba(255,255,255,0.2); border-bottom: 1px solid rgba(255,255,255,0.2);}
+.navbar a{float: left; font-size: 18px; text-align: center; padding: 14px 20px; text-decoration: none; border-left: 1px solid rgba(255,255,255,0.2);}
+.navbar a i{color: #fff;}
+.dropdown {float: left; overflow: hidden;}
+.dropdown .dropbtn {font-size: 18px; border: none; outline: none; color: #fff; padding: 14px 20px; background-color: inherit;  margin: 0; display: inline-block; width: 220px; cursor: pointer; border-left: 1px solid rgba(255,255,255,0.2); border-right: 1px solid rgba(255,255,255,0.2);}
+.dropbtn-color{color:#0050a5;}
+.dropdown .dropbtn:nth-child(2){margin-left: -1px;}
+.navbar a:hover, .dropdown:hover .dropbtn {background: rgba(255,255,255,0.2);}
+.dropdown-content {display: none; position: absolute; background: rgba(255,255,255,1); z-index: 1;}
+.dropdown-content a {float: none; padding: 12px 16px; text-decoration: none; display: block; text-align: left;}
+.dropdown-content a{display: block; width: 220px;  -moz-transition: all .5s;    -webkit-transition: all .5s;    -o-transition: all .5s;    transition: all .5s;
+    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;    box-sizing: border-box; /*border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-top:1px solid #ddd;*/}
+.dropdown button.dropbtn i{color:; margin-left: 50px; margin-top: -5px;}
+.dropdown-content a:hover {background: rgba(255,255,255,0.2); color:#0050a5;}
+.dropdown:hover .dropdown-content {  display: block;}
+
+/*서브 top */
+.sub-top-background0{background:url('../img/img_v_signup.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background1{background:url('../img/img_v_animal.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background1-2{background:url('../img/img_v_forms.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background2{background:url('../img/img_v_login.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background2-2{background:url('../img/img_v_careersnotice.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background2-3{background:url('../img/img_v_introduce.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background3{background:url('../img/img_v_service_.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background3-2{background:url('../img/office-1209640_1920.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background3-3{background:url('../img/business-suit-690048_1920.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+.sub-top-background4{background:url('../img/img_v_inquire.jpg'); opacity: 0.9; height: 320px; background-size: cover; background-position: center center;  background-repeat: no-repeat; overflow: hidden;}
+
+/*서브컨텐츠 intro*/
+.serviceintro{margin: 0px; cursor: default; position: relative; margin-top: 110px;}
+.serviceintro h2{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color:#fff; font-size:40px;}
+/*.serviceintro h2{height: 100px; line-height: 100px;}*/
+.serviceintro p{position: absolute; top:0px; right: 0; width: 1400px;}
+.font-blue{color:#334478; font-weight: bold;}
+.font-gray{color:#bbb; margin: 0 5px;}
+/*견적문의*/
+.topmg_serviceintro{margin-top: 110px;}
+
+/*탭 메뉴*/
+/* Style the tab */
+.tab {overflow: hidden; background-color: transparent;}
+/* Style the buttons inside the tab */
+.tab button {background-color: inherit; border: none; outline: none; float: left; cursor: pointer; width: 33.36%; height: 65px; transition: 0.3s; font-size: 18px; border:1px solid #ddd; margin-left: -0.7px; font-weight: bold; color:#888;}
+.tab button:first-child{margin-left: 0px;}
+/*.tab button:nth-child(2):before{display: block; content: ''; position: absolute; top: 50%; left: 0; width: 1px; height: 20px; margin: -10px 0 0; background: #c9c9c9;}*/
+/*.tab button:nth-child(3):before{display: block; content: ''; position: absolute; top: 50%; left: 0; width: 1px; height: 20px; margin: -10px 0 0; background: #c9c9c9;}*/
+/* Change background color of buttons on hover */
+.tab button:hover {background-color: #fff;}
+/* Create an active/current tablink class */
+.tab button.active {background-color: #fff; color:#444; border-bottom:1px solid #fff;}
+/* Style the tab content */
+.tabcontent {display: none; border-top: 1px solid #ddd; margin-top: -1px;}
+
+/*서비스 정보*/
+#sub-visual-bg{background: url(../img/img_lease_bg.jpg); background-position:center center; height: 520px;}
+#sub-visual-bg-basic{background: #fff;}
+#sub-visual-bg-basic .sub-content p{display: block; margin-left: auto; margin-right: auto; width: 50%;}
+#sub-visual{}
+.sub-visual-info{width: 46%; padding: 160px 10px;}
+.sub-img-info{width: 46%; padding: 50px 10px;}
+.sub-form-info{width: 46%; padding: 50px 10px;}
+.sub-title h3{font-size: 30px; margin-bottom: 40px;}
+.sub-content p{margin-bottom: 50px; line-height: 30px; font-size:17px;}
+.sub-content p.caption{font-size: 20px; font-weight: bold;}
+.sub-content p.caption:before{content:""; border:2px solid #1F6BBB; height: 12px; display: inline-block; vertical-align: middle; margin-top: -4px; margin-right: 5px;}
+.sub-content p.caption:after{content: ""; border-bottom:1px solid #444;}
+.sub-button a:hover{background: #fff; color:#444; transition: 0.8s ease;}
+.sub-button a{border:1px solid #aaa; display: inline-block; padding: 8px 30px;}
+
+#idxProgram { width:100%; min-width:1200px; }
+#idxProgram > div { width:1200px; margin-left:auto; margin-right:auto; padding:55px 20px; overflow:hidden; }
+#idxProgram > div > h2 {text-align:center; font-size:; padding-bottom:15px; margin-bottom:20px; background:url('../img/img_line_b.png') center bottom no-repeat; }
+#idxProgram > div > p {padding-bottom:330px; font-size:15px; text-align:center; background:url('../img/img_sec_program_x.png') center bottom no-repeat; }
+#idxProgram > div > div { margin-top:40px; overflow:hidden; }
+#idxProgram > div > div > dl { width:30%; float:left; }
+#idxProgram > div > div > dl:not(:first-of-type) { margin-left:5%; }
+#idxProgram > div > div > dl > dt { text-align:center; border-radius:100px; padding-top:10px; padding-bottom:10px; margin-bottom:40px; }
+#idxProgram > div > div > dl > dt > * { display:block; color:#fff;}
+#idxProgram > div > div > dl > dt > b { font-size:20px; color:#fff;}
+#idxProgram > div > div > dl > dd { padding-top:110px; padding-bottom:20px; background-position:center top; background-repeat:no-repeat; text-align:center; font-size:15px; border-bottom-width:3px; border-bottom-style:solid; }
+#idxProgram > div > div > dl:nth-of-type(1) > dt { background-color:#4d4686; }
+#idxProgram > div > div > dl:nth-of-type(2) > dt { background-color:#867e46; }
+#idxProgram > div > div > dl:nth-of-type(3) > dt { background-color:#46866f; }
+#idxProgram > div > div > dl:nth-of-type(1) > dd { background-image:url('../img/img_sec_program_a.png'); border-bottom-color:#4d4686; }
+#idxProgram > div > div > dl:nth-of-type(2) > dd { background-image:url('../img/img_sec_program_b.png'); border-bottom-color:#867e46; }
+#idxProgram > div > div > dl:nth-of-type(3) > dd { background-image:url('../img/img_sec_program_c.png'); border-bottom-color:#46866f; }
+
+/*모바일 서비스*/
+.mobile{background: url('../img/Captures.png') center; opacity: 0.9; height: 800px; background-size: 1000px 800px;  background-repeat: no-repeat; cursor: default; /*border: 1px solid #ccc;*/ padding: 30px;}
+.font-sizeup{font-size:60px;}
+#_icon{font-size:60px; margin-left: 10px;}
+#_icon i{color:#FF717B;}
+#_nowtext {/*-webkit-animation: effectfade 1s 1.25s ease-out both; animation: effectfade 1s 1.25s ease-out both;*/ margin-top: 70px; margin-bottom: 70px; text-align: center; cursor: default;}
+._nowtext span{font-size: 20px;}
+._nowtext p{font-size: 30px; margin-top: 10px; margin-bottom: 20px; padding-bottom: 20px; background:url('../img/img_line_b.png') center bottom no-repeat;}
+._nowtext a{padding: 10px 30px; display: inline-block; border:1px solid #444; font-size: 25px;}
+._nowtext a:hover, ._nowtext a:hover i{background: #334478; color:#fff;}
+.text-border-gray{color: ; text-shadow: -1px -1px 0 #555, 1px -1px 0 #555, -1px 1px 0 #555, 1px 1px 0 #555;}
+
+/*form*/
+.form_row h3{font-size:30px; margin-bottom: 30px; border-bottom:1px solid #444; padding-bottom: 10px;}
+
+/*개인정보 관리*/
+.user_info{margin: 40px 0;}
+/*.user_info .form_col-100 input[type=text]{width: %;}*/
+.user_info ul li:first-child{border-top:1px solid #ddd;}
+.user_info ul li{border-bottom: 1px solid #ddd;}
+.user_info .colgroup1{display: inline-block; width: 15% !important; background: #eee; height: 50px; vertical-align: top; width: 168px; height: 70px; background: #f9f9f9; padding: 25px 0 0 20px;   font-weight: 700;}
+.user_info ul li:last-child .colgroup1{height: 110px;}
+.user_info .colgroup2{display: inline-block !important; width: 79.5%; padding: 12px 15px;}
+
+/*탭_탭*/
+ul.tabs{margin: 0px; padding: 0px; list-style: none;}
+ul.tabs li{background: none; color: #222; display: inline-block; padding: 9px 17px; cursor: pointer; border-top-left-radius: 10px; border-top-right-radius: 10px; border-left:1px solid #ddd; border-top:1px solid #ddd; border-right: 1px solid #ddd;}
+ul.tabs li.current{background: /*#025e9c*/ #228EC1; color: #fff;}
+.tab-content{display: none;	background: ; padding: 30px 0px; position: relative; border-top:1px solid #ddd;}
+.tab-content.current{display: inherit;}
+
+.sub_navi-col3{height: 70px; position: absolute; bottom:0; width: 100%;}
+.sub_navi-col3 ul{position: absolute; left: 50%; transform: translate(-50%); display: table; margin-top: -5px; border-bottom:1px solid #ddd;}
+.sub_navi-col3 ul li{text-align: center; display: table-cell;}
+.sub_navi-col3 ul li a{display: inline-block; font-size: 20px; line-height: 70px; font-weight: bold; color:#; background: #fff; width: 466px; border-top:4px solid #fff;}
+.sub_navi-col3 ul li:nth-child(2) a:before{display: block; content: ''; position: absolute; top: 50%; left: ; width: 1px; height: 20px; margin: -10px 0 0; background: #c9c9c9;}
+.sub_navi-col3 ul li:nth-child(3) a:before{display: block; content: ''; position: absolute; top: 50%; left: ; width: 1px; height: 20px; margin: -10px 0 0; background: #c9c9c9;}
+
+/*일보조회*/
+.daily_check{margin: 40px 0;}
+.daily_check form button, .daily_check select, .daily_check input[type=text], .daily_check form input[type=submit]{background: #fff; border:1px solid #e2e2e2; padding: 10px 15px; font-size: 15px;}
+.daily_check form input[type=submit]{cursor: pointer; background: #fdfdfd;}
+.daily_check button[type=button].e-download{position: absolute; top:30px; right: 0px; border: 1px solid #e2e2e2; background: #fdfdfd; padding: 10px 20px; cursor: pointer; font-size: 15px;}
+/*.start-date, .end-date{cursor: default;}*/
+table{width: 100%; margin-top: 15px; border-collapse: collapse; text-align: center;}
+table th, table td {border: 1px solid #777;}
+
+table.ui-datepicker-calendar {display: none;}
+
+/*문의하기,견적문의*/
+.form_row {display: -ms-flexbox; /* IE10 */ display: flex; -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap; margin: 0 0px;}
+.form_col-50 {-ms-flex: 45%; /* IE10 */ flex: 45%;}
+.form_col-50:nth-child(1){margin-right: 10px;}
+.form_col-100 {-ms-flex: 100%; /* IE10 */ flex: 100%;}
+/*.support_col-50, .support_col-100 {padding: 0 16px;}*/
+.form_row input[type=text]{width: 474px;  padding: 12px; border: 1px solid #ccc;  font-size: 16px;}
+input#name{width: 200px;}
+.form_row input[type=tel], .form_row select{width: 130px; padding: 12px; border: 1px solid #ccc; font-size: 16px;}
+.form_row input[type=email]:first-child{width: 170px; padding: 12px; border: 1px solid #ccc; font-size: 16px;}
+.form_row input[type=email]:last-child{width: 200px; padding: 12px; border: 1px solid #ccc; font-size: 16px;}
+/*.form_row input[type=file]{font-size:16px;}*/
+.form_row button{padding: 12px 20px; border:1px solid #eee; background: #fcfcfc; font-size:16px; color:#888; cursor: pointer; vertical-align: middle; margin-top: -5px;}
+.form_row textarea{width: 500px; /* Full width */ padding: 12px; /* Some padding */ border: 1px solid #ccc; /* Gray border */ border-radius: px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */ margin-top: px; /* Add a top margin */ margin-bottom: px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */ font-size:16px; height: 276px;}
+/*.where {display: block; margin: 25px 15px; font-size: 11px; color: #000; text-decoration: none;} */
+.filebox input[type="file"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+.filebox label {display: inline-block; padding: .5em .75em; color: #999; vertical-align: middle; background-color: #fdfdfd; cursor: pointer; border: 1px solid #ebebeb; border-bottom-color: #e2e2e2;}
+/* named upload */
+.filebox .upload-name {display: inline-block; padding: .5em .75em; font-size: inherit; background-color: #f5f5f5; border: 1px solid #ebebeb; border-bottom-color: #e2e2e2; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
+.filebox.bs3-primary label {display: inline-block; vertical-align: top; text-align: center; /*color: #fff; background-color: #337ab7; border-color: #2e6da4;*/ width: 15%;}
+
+/*문의전화*/
+#customer{background: #; border: 1px solid #ccc; padding: 20px; margin:20px 0;}
+#customer .title{display: inline-block; text-align: center; width: ; line-height: 50px;}
+#customer .content{float: right; text-align: center; width: ; line-height: 50px;}
+#customer .title h4{font-size:18px;}
+#customer .content p{display: inline-block; font-size:13px; /*margin-right: 3px;*/}
+#customer .content h3{font-size:18px; display: inline-block; color: ;}
+/*#customer .content h3 i{margin-right: 5px; color:#fff; background:#ED6D00; padding: 15px 16px; border-radius: 50px; margin-left: -19px; border:1px solid #ddd;}*/
+
+/*.form_row label {margin-bottom: 10px; display: inline-block; width: 15%;}*/
+.form_row ul{margin-bottom: 20px;}
+.form_row ul li:first-child{border-top:1px solid #ddd;}
+/*.form_row  ul li:last-child .colgroup1{height: 120px;}*/
+.form_row ul li{border-bottom: 1px solid #ddd;}
+.form_row .colgroup1{display: inline-block; width: 120px; height: auto; vertical-align: top; height: 50px; background: #fff; padding: 25px 0 0 20px; font-weight: 700; border-right: 1px solid #ddd;}
+.form_row ul li.heighthigh .colgroup1{height: 276px;}
+.form_row ul li.heighthighx2 .colgroup1{height: 275px;}
+.form_row ul li.heighthighx2 textarea{height: 270px;}
+.form_row ul li.heightlow .colgroup1{height: 124px;}
+.form_row .colgroup2{display: inline-block; width: 510px; padding: 12px 15px; height: 50px;}
+.font-red i{color: #E73B3B;}
+.form_row .icon-container { padding: 7px 0; font-size: 24px;}
+.form_row .btn {background-color: #334478; color: white; display: inline-block; padding: 12px 0; margin: 50px 0 0 0; border: none;
+  width: 190px; cursor: pointer; font-size: 22px; display: table; margin-left:auto; margin-right: auto;}
+.form_row .btn:hover {background:#223263;}
+
+/* 체크박스*/
+/*the container */
+.checkbox_container {display: block; position: relative; padding-left: 35px; margin-bottom: 12px;
+  cursor: pointer; font-size: 17px; -webkit-user-select: none; -moz-user-select: none;
+  -ms-user-select: none; user-select: none;}
+/* Hide the browser's default checkbox */
+.checkbox_container input{position: absolute; opacity: 0; cursor: pointer; height: 0; width: 0;}
+/* Create a custom checkbox */
+.checkmark {position: absolute; top: 0; left: 0; height: 25px; width: 25px; background-color: #fff; border: 1px solid #aaa;}
+/* On mouse-over, add a grey background color */
+/*.checkbox_container:hover input ~ .checkmark {background-color: #ccc;}*/
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {background-color: #fff; border: 1px solid #aaa;}
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {content: ""; position: absolute; display: none;}
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {display: block;}
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {left: 9px; top: 5px; width: 5px; height: 10px;
+  border: solid #444; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg); transform: rotate(45deg);}
+
+/*커스텀 셀렉트*/
+.custom-select {position: relative; margin-bottom: 20px;}
+.custom-select select {display: none; /*hide original SELECT element:*/}
+.select-selected {background-color: #fff; /*DodgerBlue;*/}
+/*style the arrow inside the select element:*/
+.select-selected:after {position: absolute; content: ""; top: 20px; right: 10px; width: 0; height: 0;
+  border: 6px solid transparent; border-color: #444 transparent transparent transparent;}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {border-color: transparent transparent #444 transparent;  top: 14px;}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {color: #444; padding: 10px 16px; border: 1px solid transparent;
+  border-color: transparent #ccc #ccc #ccc; cursor: pointer; user-select: none;}
+.select-selected{border-top:1px solid #ccc;}
+/*style items (options):*/
+.select-items {position: absolute; background-color: #fff; top: 100%; left: 0; right: 0; z-index: 1;}
+/*hide the items when the select box is closed:*/
+.select-hide {display: none;}
+.select-items div:hover, .same-as-selected {background-color: #fafafa;}
+
+/*접수처리현황조회*/
+.inner_section {width: 100%; margin: 50px 0; cursor: default;}
+.inner_section.type{}
+.note_box{padding:1.5rem; background:#fff; border:#ccc solid 1px; text-align:left;}
+.note_box dt h3{margin-bottom: 10px; font-size:25px;}
+.note_box dd{font-size:18px;}
+.sign_wrap {width:100%; margin-top:1rem;}
+.sign_wrap:after {content:""; display:block; clear:both; height:0; visibility:hidden;}
+.sign_wrap > div {width:100%;}
+.sign_wrap > div > h4 {height:2rem; padding:1rem; border-left:#777 solid 1px; background:#666; color:#fff; font-size:1rem; font-weight:400; text-align:center; vertical-align:middle;}
+.sign_wrap > div > h4 i.i_star:before {margin-left:2px; color:#fff; font-size:1rem;}
+.sign_wrap > div:first-child > h4 {border-left:none; font-size:20px;}
+.sign_cont {position:relative; height:15.7rem; padding:2rem; border:1px solid #ccc; background:#fff;}
+.sign_wrap > div:first-child > .sign_cont {border-left:;}
+.sign_cont .btn_c {position:absolute; left:0; bottom:1.5rem; width:100%; text-align:center;}
+.sign_cont > .tbl_type th,
+.sign_cont > .tbl_type td {padding:0.6rem 1rem; vertical-align:middle; text-align: left; width: 60%; font-size: 20px;}
+.sign_cont > .tbl_type td .btn_w.mid {padding:0; width:10rem;}
+.sign_cont .btn {display:inline-block; min-width:4.75rem; width: 200px; height: 50px; padding:0 1rem; border:1px solid #444; color:#fff; cursor: pointer;}
+.sign_cont .btn.bl {background:#334478; font-size: 17px;}
+.point {color:#223263 !important; font-weight:400;}
+
+/*매뉴얼*/
+.menual_container{position: relative; margin: 40px 0;}
+/* Hide the images by default */
+.mySlides {display: none; display: block; width: 1200px;}
+.mySlides img{display: block; margin-left: 7%; margin-right: 7%;}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {cursor: pointer;}
+/* Next & previous buttons */
+.prev, .next {cursor: pointer;  position: absolute; top: 40%; width: auto; padding: 16px; margin-top: -50px; font-weight: bold;
+  font-size: 60px; border-radius: 0 3px 3px 0; user-select: none; -webkit-user-select: none;}
+/* Position the "next button" to the right */
+.next {right: 0; border-radius: 3px 0 0 3px;}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,.next:hover {background-color: rgba(0, 0, 0, 0.8); color:#fff;}
+/* Number text (1/3 etc) */
+.numbertext {color: #444; font-size: 12px; padding: 8px 12px; position: absolute; top: 0;}
+/* Container for image text */
+.caption-container {text-align: center; background-color: ; padding: 2px 16px;}
+.caption-container p{color:; font-size:20px; margin: 15px 0;}
+.menual_row:after {content: ""; display: table; clear: both; margin-bottom: 20px;}
+/* Six columns side by side */
+.menual_row .column {float: left; width: 16.58%;}
+/* Add a transparency effect for thumnbail images */
+.menual_demo {opacity: 0.6;}
+.active, .menual_demo:hover {opacity: 1;}
