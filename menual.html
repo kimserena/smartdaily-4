@@ -4,16 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>스마트데일리</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link href="css/common.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="img/app-blue.png"> </head>
+</head>
 
 <body style="overflow-y: scroll;">
     <header>
@@ -155,45 +151,11 @@
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">취소</button> <span class="psw"><a href="#">패스워드 찾기</a></span> </div>
         </form>
     </div>
-    <script>
-        $(document).ready(function () {
-            // Get the element with id="defaultOpen" and click on it
-            document.getElementById("defaultOpen").click();
-        });
-        /*매뉴얼 슬라이드*/
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("menual_demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
-    </script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="https://kit.fontawesome.com/b55569e153.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

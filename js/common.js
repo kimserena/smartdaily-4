@@ -62,6 +62,12 @@ $(document).ready(function () {
 
 /*서브*/
 //서브 탭 메뉴
+
+$(document).ready(function () {
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+});
+
 function openInfo(evt, infoName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -1262,3 +1268,38 @@ function fnExcelReport(id, title) {
     }
 }
 
+/*매뉴얼 슬라이드*/
+//window.onload = function(){
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("menual_demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+//}
